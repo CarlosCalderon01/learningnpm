@@ -1,8 +1,8 @@
 # Features
 
 - Type of dependency?
-- what is node_modules folder?
 - List Commands!
+- Good Know!
 
 ## - Type of dependency?
 
@@ -28,15 +28,22 @@ To summarize:
 Use --save or simply npm install package-name to add a dependency that's needed for both development and production execution (this is the default behavior of npm 5.0+).
 Use --save-dev or npm install package-name --save-dev to add a dependency that's only needed for development.
 These options allow you to effectively manage and share your project's dependencies, ensuring that others can replicate your development environment easily.
-## - What is node_modules folder?
 
-## - List commands!
+##### Example
+  "dependencies": {
+    "figlet": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 
-### - Only Command:
+## - List commands:
+
+#### - Only Command
 
 	- npm init --yes
 	- npm install [package]
-	- npm uninstall [package]
+	- npm uninstall [package] or npm rm [package]
 	- npm update [package]
 	- npm outdated
 	- npm list
@@ -49,8 +56,13 @@ These options allow you to effectively manage and share your project's dependenc
 	- npm version [type]
 	- npm config
 	- npm help [package]
+	- npm install --save-dev [package]
+	- npm i --D [package]
+	- npm install --production
 
 //-----//-----//-----//-----//-----//-----//-----//-----//-----//
+
+#### - Only Command + Description
 
 - npm init: Inicia la creación de un nuevo archivo package.json interactivo que describe tu proyecto y sus dependencias.
 - npm init --y
@@ -69,5 +81,14 @@ These options allow you to effectively manage and share your project's dependenc
 - npm version [tipo]: Incrementa la versión de tu proyecto según el tipo especificado (major, minor, patch).
 - npm config: Configura opciones de npm, como establecer el registro predeterminado o configurar opciones de proxy.
 - npm help [comando]: Muestra la documentación de ayuda para un comando específico.
+- npm install --production: solo instalara als dependencias de produccion.
 
-#End
+# Good Know
+
+
+	 El archivo package.json contine y guarda todo las dependencias del proyecto.
+	 El "package-lock.json" se genera y se automodifica solo, si debe de ir en el repositorio git, y es un comprobante de lo que se ha instalado. WARNING, NUNCA TOCAR!
+	 La carpeta node_modules contine todas las dependencias instaladas.
+	 Crear un archivo .gitignore he ignorar la carpeta node_modules no es una buena practica subir a bajar las librerias de las dependencias a git.
+
+# End

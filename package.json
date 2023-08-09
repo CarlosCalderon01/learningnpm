@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "figlet": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
